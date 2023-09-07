@@ -10,7 +10,7 @@ RUN apk add openssh \
     && chmod +x /usr/src/app/init_container.sh \
     && cd /etc/ssh/ \
     && ssh-keygen -A
-
+RUN dos2unix /usr/src/app/init_container.sh /usr/src/app/init_container.sh
 RUN npm install --production --silent && mv node_modules ../
 COPY . .
 EXPOSE 3000 2222
