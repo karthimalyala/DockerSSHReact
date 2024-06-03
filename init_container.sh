@@ -9,4 +9,4 @@ echo "Starting SSH ..."
 
 # Start npm react
 
-npm star
+npm start
