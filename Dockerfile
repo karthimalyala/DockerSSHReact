@@ -1,5 +1,7 @@
 FROM node:lts-alpine
 ENV NODE_ENV=production
+ENV PYTHONUNBUFFERED=1
+ENV SAMPLE_ENV_VAR="This is a sample environment variable"
 WORKDIR /usr/src/app
 COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*","init_container.sh", "./"]
 COPY sshd_config /etc/ssh/
